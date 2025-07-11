@@ -113,3 +113,14 @@ a {
     font-size: 1.2rem;
   }
 }
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  color: var(--color-heading);
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
