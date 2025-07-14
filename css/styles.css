@@ -1,9 +1,10 @@
 :root {
   --color-primary: #2584ff;
-  --color-seconday: #00d9ff;
+  --color-secondary: #00d9ff;
   --color-accent: #ff3400;
   --color-heading: #1b0760;
   --color-body-text: #918ca4;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -105,7 +106,7 @@ a {
 }
 
 .badge--secondary {
-  background: var(--color-seconday);
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -190,7 +191,7 @@ a {
 }
 
 .btn--secondary {
-  background: var(--color-seconday);
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -262,5 +263,141 @@ a {
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 7%;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.card--primary .badge--primary {
+  background: #1dcbbd;
+}
+
+.card--secondary .badge--secondary {
+  background: #40cfca;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  top: -6px;
+  width: 40px;
+}
+
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
+}
+
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-body-darker);
+  /* line-height: 1.3rem; */
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  /* font-family: "Courier New", Courier, monospace; */
+  margin-bottom: 0;
+}
+
+.quote__organization {
+  color: var(--color-heading);
+  opacity: 0.4;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+  .quote__author {
+    font-size: 2.4rem;
+  }
+  .quote__organization {
+    font-size: 1.6rem;
   }
 }
