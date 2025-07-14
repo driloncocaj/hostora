@@ -190,10 +190,18 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -273,7 +281,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -358,6 +366,78 @@ a {
   right: 5%;
   top: -6px;
   width: 40px;
+}
+
+/* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plan__name {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.plan__price {
+  font-size: 5rem;
+}
+
+.plan__cycle {
+  font-size: 2rem;
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+
+.plan__desc {
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 300;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  top: -6px;
+  right: 4%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+  .plan__name {
+    font-size: 1.4rem;
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__cycle {
+    font-size: 1.6rem;
+  }
+  .plan__desc {
+    font-size: 1.7rem;
+  }
 }
 
 .media {
@@ -667,5 +747,29 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
